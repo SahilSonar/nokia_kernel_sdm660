@@ -394,6 +394,12 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 ifeq ($(TARGET_BOARD_TYPE),auto)
 KBUILD_CFLAGS    += -DCONFIG_PLATFORM_AUTO
 endif
+		   -std=gnu89
+KBUILD_CPPFLAGS := -D__KERNEL__
+
+# Flags to tune generated code for Cortex-A53 CPU
+KBUILD_CFLAGS += -march=armv8-a -mtune=cortex-a53
+
 
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
