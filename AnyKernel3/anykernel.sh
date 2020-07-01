@@ -4,7 +4,7 @@
 ## AnyKernel setup
 # begin properties
 properties() { '
-kernel.string=Working our magick, Fueling your phone with Enigma. Please be patient.
+kernel.string=Working our magic, Fueling your phone with Enigma. Please be patient.
 do.devicecheck=0
 do.modules=0
 do.systemless=0
