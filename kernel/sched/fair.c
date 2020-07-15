@@ -6981,7 +6981,7 @@ static inline int find_best_target(struct task_struct *p, int *backup_cpu,
 				 * high OPP.
 				 */
 				if ((capacity_orig - min_capped_util) <
-					target_idle_max_spare_cap)
+					target_max_spare_cap)
 					continue;
 
 				/*
@@ -6995,7 +6995,7 @@ static inline int find_best_target(struct task_struct *p, int *backup_cpu,
 					continue;
 
                                 target_capacity = capacity_orig;
-				target_idle_max_spare_cap = capacity_orig -
+				target_max_spare_cap = capacity_orig -
 							    min_capped_util;
 				best_idle_cstate = idle_idx;
 				best_idle_cpu = i;
